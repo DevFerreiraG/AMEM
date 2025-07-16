@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>30 Dias de Gratidão & Propósito | Renove Sua Fé</title>
+    <meta name="description" content="Ebook com 30 reflexões diárias, orações e prompts para renovar sua fé em apenas 5 minutos por dia.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Reset Básico e Variáveis de Cor --- */
+        :root {
+            --cor-primaria: #2c5282; /* Azul profundo */
+            --cor-secundaria: #d69e2e; /* Dourado/Mostarda */
+            --cor-texto: #2d3748; /* Cinza escuro */
+            --cor-fundo: #f7fafc; /* Cinza bem claro */
+            --cor-branco: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--cor-texto);
+            line-height: 1.7;
+            background-color: var(--cor-branco);
+        }
+
+        /* --- Tipografia --- */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--cor-primaria);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            max-width: 700px;
+        }
+
+        /* --- Estrutura e Seções --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+
+        /* --- Botão Principal (CTA) --- */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #f6ad55, var(--cor-secundaria));
+            color: var(--cor-branco);
+            padding: 18px 35px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 10px 20px rgba(214, 158, 46, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(214, 158, 46, 0.4);
+        }
+        
+        .cta-subtext {
+            font-size: 0.9rem;
+            margin-top: 10px;
+            display: block;
+        }
+
+        /* --- 1. Seção Principal (Hero) --- */
+        .hero {
+            background-image: linear-gradient(rgba(44, 82, 130, 0.7), rgba(44, 82, 130, 0.7)), url('https://images.unsplash.com/photo-1490782300182-37a83c65c195?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: var(--cor-branco);
+            padding: 120px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: var(--cor-branco);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 650px;
+            margin: 1.5rem auto 2.5rem auto;
+            opacity: 0.9;
+        }
+        
+        .ebook-mockup {
+            max-width: 350px;
+            margin-top: 3rem;
+            filter: drop-shadow(0px 15px 25px rgba(0,0,0,0.2));
+        }
+
+        /* --- 2. Seção de Dor / Conexão --- */
+        #dor {
+            background-color: var(--cor-fundo);
+        }
+        
+        #dor .container {
+            text-align: center;
+        }
+        
+        #dor ul {
+            list-style: none;
+            max-width: 700px;
+            margin: 2rem auto;
+            text-align: left;
+        }
+        
+        #dor li {
+            padding: 10px 0;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        #dor li:before {
+            content: '✓';
+            color: var(--cor-secundaria);
+            font-weight: bold;
+            display: inline-block;
+            width: 1.5em;
+        }
+
+        /* --- 3. Seção da Solução --- */
+        .solucao-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .solucao-card {
+            background: var(--cor-branco);
+            padding: 2.5rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+        }
+
+        .solucao-card .icon {
+            font-size: 3rem;
+            color: var(--cor-secundaria);
+            margin-bottom: 1rem;
+        }
+
+        /* --- 4. Seção da Oferta --- */
+        #oferta {
+             background-color: var(--cor-fundo);
+             text-align: center;
+        }
+        
+        #oferta .oferta-box {
+            background: var(--cor-branco);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+            max-width: 800px;
+            margin: 2rem auto;
+            text-align: left;
+        }
+        
+        #oferta ul {
+            list-style: none;
+            font-size: 1.2rem;
+        }
+        
+        #oferta li {
+            margin-bottom: 1rem;
+        }
+        
+        #oferta li:before {
+            content: '✅';
+            margin-right: 15px;
+        }
+        
+        #oferta .bonus {
+            color: var(--cor-secundaria);
+            font-weight: bold;
+        }
+
+        /* --- 5. Seção de Amostra --- */
+        .amostra-box {
+            background: #fff8e1; /* Cor creme bem clara */
+            border-left: 5px solid var(--cor-secundaria);
+            padding: 2.5rem;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        
+        .amostra-box blockquote {
+            font-style: italic;
+            color: #5d4037; /* Marrom escuro */
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            border-left: 3px solid #e0e0e0;
+        }
+
+        /* --- 6. Seção de Prova Social (Depoimentos) --- */
+        #depoimentos {
+             background-color: var(--cor-fundo);
+        }
+        
+        .depoimentos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .depoimento-card {
+            background: var(--cor-branco);
+            padding: 2rem;
+            border-radius: 10px;
+            border-top: 5px solid var(--cor-primaria);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+        }
+        
+        .depoimento-card p {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+        
+        .depoimento-card .autor {
+            font-weight: bold;
+            color: var(--cor-primaria);
+        }
+
+        /* --- 7. Seção de Oferta Final --- */
+        #oferta-final {
+            background-color: var(--cor-primaria);
+            color: var(--cor-branco);
+            text-align: center;
+        }
+
+        #oferta-final h2 {
+            color: var(--cor-branco);
+        }
+        
+        #oferta-final .preco {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 1rem 0;
+            color: var(--cor-secundaria);
+        }
+        
+        #oferta-final .preco-subtext {
+            font-size: 1.2rem;
+        }
+
+        /* --- 8. Seção de Garantia --- */
+        .garantia-box {
+            max-width: 800px;
+            margin: 2rem auto;
+            text-align: center;
+            padding: 2rem;
+            border: 2px dashed var(--cor-secundaria);
+            border-radius: 10px;
+            background-color: #fffaf0;
+        }
+        
+        .garantia-box .icon {
+            font-size: 3rem;
+            color: var(--cor-secundaria);
+            margin-bottom: 1rem;
+        }
+        
+        /* --- 9. FAQ (Perguntas Frequentes) --- */
+        #faq {
+            background-color: var(--cor-fundo);
+        }
+        
+        #faq .container {
+            max-width: 800px;
+        }
+        
+        details {
+            background: var(--cor-branco);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        summary {
+            padding: 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            list-style: none; /* Remove a seta padrão */
+            position: relative;
+        }
+        
+        summary::-webkit-details-marker {
+            display: none; /* Remove a seta padrão no Chrome */
+        }
+        
+        summary:after {
+            content: '+'; /* Adiciona um '+' customizado */
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--cor-primaria);
+            transition: transform 0.2s;
+        }
+        
+        details[open] summary:after {
+            transform: translateY(-50%) rotate(45deg); /* Gira o '+' para 'x' */
+        }
+        
+        details p {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            margin: 1rem 0 0 0;
+        }
+
+        /* --- Rodapé --- */
+        footer {
+            background-color: var(--cor-texto);
+            color: #a0aec0;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: var(--cor-fundo);
+            text-decoration: none;
+        }
+
+        /* --- Responsividade (para celulares) --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            section { padding: 60px 0; }
+            
+            .hero { padding: 80px 0; }
+            .ebook-mockup { max-width: 280px; }
+            
+            .solucao-grid, .depoimentos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Sua Jornada de 30 Dias para uma Fé Renovada e um Coração Grato</h1>
+            <p>Cansado da rotina espiritual morna? Descubra o devocional diário com reflexão, oração e escrita que vai reavivar seu propósito em apenas 5 minutos por dia.</p>
+            
+            <a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta-button">QUERO COMEÇAR MINHA JORNADA AGORA</a>
+            <span class="cta-subtext">Pagamento único de R$ 47 | Acesso imediato</span>
+            
+            <img src="https://i.ibb.co/bFq7z3D/ebook-mockup-gratidao.png" alt="Capa do Ebook 30 Dias de Gratidão & Propósito" class="ebook-mockup">
+        </div>
+    </header>
+
+    <main>
+        <section id="dor">
+            <div class="container">
+                <h2>Você se identifica com algum destes sentimentos?</h2>
+                <p>A correria do dia a dia te engole e, quando você percebe, passou mais um dia sem se conectar com Deus como gostaria. A oração parece repetitiva, a leitura da Bíblia soa distante e a gratidão... bem, ela se perde em meio às preocupações.</p>
+                <ul>
+                    <li>Sua fé parece estagnada, presa em uma rotina sem profundidade?</li>
+                    <li>Você sente um vazio, como se estivesse faltando um propósito maior em suas ações diárias?</li>
+                    <li>Você luta para encontrar palavras para orar ou para sentir verdadeira gratidão?</li>
+                    <li>Você tem pouco tempo e precisa de uma prática espiritual que seja simples e transformadora?</li>
+                </ul>
+                <p>Se você disse "sim", saiba que <strong>você não está sozinho(a)</strong>. Existe um caminho simples para reencontrar a alegria e o propósito na sua caminhada com Deus.</p>
+            </div>
+        </section>
+
+        <section id="solucao">
+            <div class="container">
+                <h2>O roteiro de 30 dias para transformar sua vida espiritual</h2>
+                <p style="text-align: center; margin-left: auto; margin-right: auto;">Este não é apenas um livro. É uma jornada guiada para cultivar um coração grato e realinhar sua vida com o propósito divino. Em cada dia, você terá uma estrutura poderosa:</p>
+                <div class="solucao-grid">
+                    <div class="solucao-card">
+                        <div class="icon">📖</div>
+                        <h3>Reflexão Bíblica</h3>
+                        <p>Um versículo selecionado com um comentário breve e direto para nutrir sua alma.</p>
+                    </div>
+                    <div class="solucao-card">
+                        <div class="icon">🙏</div>
+                        <h3>Oração Guiada</h3>
+                        <p>Um modelo de oração para te inspirar e dar as palavras certas para conversar com o Pai.</p>
+                    </div>
+                    <div class="solucao-card">
+                        <div class="icon">✍️</div>
+                        <h3>Prompt de Journal</h3>
+                        <p>Uma pergunta poderosa para você refletir, escrever e ouvir o que Deus tem para seu coração.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="oferta">
+            <div class="container">
+                <h2>Ao garantir seu acesso hoje, você recebe:</h2>
+                <div class="oferta-box">
+                    <ul>
+                        <li><strong>Ebook "30 Dias de Gratidão & Propósito" (PDF):</strong> Acesso imediato ao seu guia de 30 dias. Leia no celular, tablet ou computador. Imprima se desejar!</li>
+                        <li><span class="bonus">BÔNUS EXCLUSIVO: Checklist "Hábitos de Gratidão" (PDF):</span> Uma ferramenta prática de 1 página para te ajudar a incorporar a gratidão em todas as áreas da sua vida.</li>
+                    </ul>
+                </div>
+                 <a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta-button">QUERO MEU EBOOK + BÔNUS POR R$ 47</a>
+            </div>
+        </section>
+
+        <section id="amostra">
+            <div class="container">
+                 <h2>Veja na prática como sua vida pode ser transformada</h2>
+                 <p style="text-align: center; margin-left: auto; margin-right: auto;">Curioso(a) para saber como funciona? Veja um trecho do <strong>Dia 1: A Gratidão que Transforma</strong>.</p>
+                <div class="amostra-box">
+                    <h3>Versículo</h3>
+                    <blockquote>“Dêem graças em todas as circunstâncias, pois esta é a vontade de Deus para vocês em Cristo Jesus.” (1 Tessalonicenses 5:18)</blockquote>
+                    <h3>Comentário</h3>
+                    <p>A gratidão não depende do que está acontecendo ao nosso redor. Pelo contrário, ela tem o poder de transformar o que temos em suficiente, gerando um profundo contentamento no coração.</p>
+                    <h3>Oração</h3>
+                    <blockquote>“Senhor, meu coração transborda de gratidão por cada detalhe deste dia. Peço que abras meus olhos espirituais para que eu possa ver Tua mão poderosa e amorosa em todas as coisas. Amém.”</blockquote>
+                    <h3>Prompt de Journal</h3>
+                    <p>Pelo que eu posso agradecer HOJE, neste exato momento? (Liste pelo menos 3 coisas, grandes ou pequenas).</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="depoimentos">
+            <div class="container">
+                <h2>O que leitores estão dizendo:</h2>
+                <div class="depoimentos-grid">
+                    <div class="depoimento-card">
+                        <p>"Eu estava numa fase de deserto espiritual. Não tinha forças nem para orar. Este devocional foi um oásis. As orações prontas e as perguntas me guiaram de volta para perto de Deus. Simples e profundo."</p>
+                        <p class="autor">- Ana L., São Paulo/SP</p>
+                    </div>
+                    <div class="depoimento-card">
+                        <p>"Comprei por causa da praticidade. Sou mãe de dois e meu tempo é zero. Em 5 minutos, antes de dormir, eu lia, orava e refletia. Fez toda a diferença na minha paciência e na minha fé."</p>
+                        <p class="autor">- Juliana M., Belo Horizonte/MG</p>
+                    </div>
+                    <div class="depoimento-card">
+                        <p>"As perguntas do journal são poderosas. Me fizeram confrontar áreas da minha vida que eu estava ignorando. É mais que um devocional, é uma ferramenta de crescimento pessoal e espiritual."</p>
+                        <p class="autor">- Marcos P., Rio de Janeiro/RJ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="oferta-final">
+            <div class="container">
+                <h2>Pronto(a) para começar sua transformação?</h2>
+                <p>Chega de deixar sua vida espiritual para depois. Invista em você. Invista na sua fé.</p>
+                <p class="preco-subtext">Tudo isso por um pagamento único de apenas</p>
+                <div class="preco">R$ 47,00</div>
+                
+                 <a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta-button">SIM, QUERO TRANSFORMAR MINHA FÉ AGORA!</a>
+                <span class="cta-subtext" style="color: #cbd5e0;">Acesso 100% digital e imediato após a compra.</span>
+            </div>
+        </section>
+
+        <section id="garantia">
+            <div class="container">
+                <div class="garantia-box">
+                    <div class="icon">🛡️</div>
+                    <h2>Nossa Garantia de Fé e Satisfação</h2>
+                    <p>Nosso compromisso é com a sua jornada espiritual. Temos tanta certeza do poder transformador desta jornada que, se ao final dos 30 dias você não sentir seu coração mais grato, nossa equipe se compromete a fazer uma oração de acompanhamento por você. Não é sobre um produto, é sobre seu relacionamento com Deus. O seu risco é zero.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container">
+                <h2>Dúvidas Comuns</h2>
+                <details>
+                    <summary><strong>Como vou receber o ebook?</strong></summary>
+                    <p>Imediatamente após a confirmação do pagamento, você receberá um e-mail com o link para baixar o Ebook "30 Dias de Gratidão & Propósito" e o Checklist Bônus, ambos em formato PDF.</p>
+                </details>
+                <details>
+                    <summary><strong>É um livro físico?</strong></summary>
+                    <p>Não, este é um produto 100% digital. Você não receberá nada em sua casa. A vantagem é o acesso instantâneo, sem frete e você pode ler onde quiser!</p>
+                </details>
+                <details>
+                    <summary><strong>Quais são as formas de pagamento?</strong></summary>
+                    <p>Aceitamos Cartão de Crédito, PIX e Boleto Bancário. Compras via Cartão e PIX liberam o acesso na hora. O boleto pode levar até 48 horas para compensar.</p>
+                </details>
+                <details>
+                    <summary><strong>E se eu não tiver tempo para fazer todos os dias?</strong></summary>
+                    <p>Não tem problema! O devocional é seu para sempre. Embora a jornada de 30 dias seguidos seja poderosa, você pode fazer no seu próprio ritmo, sem pressão. O importante é começar!</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 | 30 Dias de Gratidão & Propósito | Todos os direitos reservados.</p>
+            <p>Este é um produto digital e não substitui o aconselhamento pastoral ou a leitura integral da Bíblia.</p>
+            </div>
+    </footer>
+
+</body>
+</html>
